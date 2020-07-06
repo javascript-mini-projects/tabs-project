@@ -5,6 +5,7 @@ const tabs = Array.from(document.querySelectorAll('.jsBtn')),
       tabContents = Array.from(tabby.querySelectorAll('.tab-content'));
 
 tabs.forEach(tab => {
+
     tab.addEventListener("click", ()=> {
         const target = tab.dataset.theme
         const tabContent = tabby.querySelector("#" + target)
@@ -15,7 +16,6 @@ tabs.forEach(tab => {
 
         tabContents.forEach(c => c.classList.remove("is-selected"));
         tabContent.classList.add('is-selected');
-
     })
 
 })
